@@ -19,9 +19,9 @@ export default defineNuxtConfig({
   ssr: true,
   runtimeConfig: {
     public: {
-      baseURL: 'http://localhost:8080/',
+      baseURL: 'http://185.189.167.11:8080/',
     },
-    baseRUL: 'http://localhost:8080/',
+    baseRUL: 'http://185.189.167.11:8080/',
   },
   telemetry: false,
 })

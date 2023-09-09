@@ -75,7 +75,14 @@ export default defineComponent({
   mixins: [],
   layout: 'AuthLayout',
   props: {},
-  setup () {},
+  setup () {
+    const config = useRuntimeConfig()
+    const apiBaseUrl = config.public.baseURL
+
+    return {
+      apiBaseUrl,
+    }
+  },
   data: () => ({
     email: '',
     firstname: '',
@@ -120,7 +127,7 @@ export default defineComponent({
           void this.$store.dispatch('login', data)
 
           globalThis.$fetch = ofetch.create({
-            baseURL: 'http://localhost:8080',
+            baseURL: this.apiBaseUrl,
             onRequest: () => {},
             headers: {
               Authorization: `Bearer ${data.token}`,

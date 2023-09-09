@@ -13,6 +13,8 @@ import { onMounted } from 'vue'
 
 const layout = 'default'
 const $store = useStore()
+const config = useRuntimeConfig()
+const apiBaseUrl = config.public.baseURL
 
 useHead({
   titleTemplate: (title: string | undefined) => {
@@ -24,7 +26,7 @@ const checkAuth = async (): Promise<boolean> => {
   const token = localStorage.getItem('neirodialog-token')
   if (!token) {
     globalThis.$fetch = ofetch.create({
-      baseURL: 'http://localhost:8080',
+      baseURL: apiBaseUrl,
       onRequest: () => {},
       headers: {},
     })
@@ -32,7 +34,7 @@ const checkAuth = async (): Promise<boolean> => {
   }
 
   globalThis.$fetch = ofetch.create({
-    baseURL: 'http://localhost:8080',
+    baseURL: apiBaseUrl,
     onRequest: () => {},
     headers: {
       Authorization: `Bearer ${token}`,

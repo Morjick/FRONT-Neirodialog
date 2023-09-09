@@ -63,7 +63,14 @@ export default defineComponent({
   components: { UiInput, UiButton, },
   layout: 'AuthLayout',
   props: {},
-  setup () {},
+  setup () {
+    const config = useRuntimeConfig()
+    const apiBaseUrl = config.public.baseURL
+
+    return {
+      apiBaseUrl,
+    }
+  },
   data: () => ({
     email: '',
     password: '',
@@ -104,7 +111,7 @@ export default defineComponent({
           void this.$router.push('/')
 
           globalThis.$fetch = ofetch.create({
-            baseURL: 'http://localhost:8080',
+            baseURL: this.apiBaseUrl,
             onRequest: () => {},
             headers: {
               Authorization: `Bearer ${data.token}`,
