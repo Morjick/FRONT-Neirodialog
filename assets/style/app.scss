@@ -1,0 +1,42 @@
+@import url('./reset.scss');
+
+:root {
+  --background-color: #fff;
+  --primary-color: #242424;
+  --warning-color: #F2C94C;
+  --aproove-color: #27AE60;
+  --danger-color: #EB5757;
+  --danger-color-alternative: #ff0000;
+  --artefact-color: #BDBDBD;
+  --shadow-color: #8A959E;
+  --input-color: #E0E0E0;
+
+  --font-color-primary: #303030;
+  --font-color-secondary: #808080;
+  --font-color-primay-alternative: #FFFFFF;
+  --font-color-placehold: #909090;
+  --font-color-subtitle: #606060;
+  --font-color-href: #4267B2;
+
+  --default-shadow: 0 0 5px 1px var(--shadow-color);
+  --danger-shadow: 0 0 5px 1px var(--danger-color-alternative);
+
+  --container-width: 1460px;
+
+  --mobile-endpoint: 500px;
+}
+
+.validation-error {
+  margin: 0 0 40px;
+  color: var(--danger-color);
+}
+
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.error-message {
+  color: var(--danger-color);
+}
