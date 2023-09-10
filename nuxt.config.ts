@@ -24,4 +24,11 @@ export default defineNuxtConfig({
     baseRUL: 'http://neirodialog.ru/api/',
   },
   telemetry: false,
+  nitro: {
+    baseURL: 'http://neirodialog.ru/api/',
+    prerender: {
+      crawlLinks: true,
+      failOnError: false,
+    },
+  },
 })
