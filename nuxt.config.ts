@@ -19,9 +19,9 @@ export default defineNuxtConfig({
   ssr: true,
   runtimeConfig: {
     public: {
-      baseURL: 'http://185.189.167.11:8080/',
+      baseURL: 'http://neirodialog.ru/api/',
     },
-    baseRUL: 'http://185.189.167.11:8080/',
+    baseRUL: 'http://neirodialog.ru/api/',
   },
   telemetry: false,
 })
