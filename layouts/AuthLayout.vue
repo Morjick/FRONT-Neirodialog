@@ -3,7 +3,7 @@
     <div class="auth-layout__header">
       <div class="auth-layout__artefact" />
       <img
-        src="../../shared/assets/icons/auth-waiting.png"
+        src="~/assets/icons/auth-waiting.png"
         alt=""
       >
       <div class="auth-layout__artefact" />
